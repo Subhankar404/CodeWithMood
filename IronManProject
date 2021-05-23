@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>TonyStark.com</title>
+    
+    <style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+body{
+    background-color: #0a2a43;
+}
+section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+section::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top,#0a2a43,transparent);
+    z-index: 100000;
+}
+.sec{
+    position: relative;
+    padding: 100px;
+}
+.sec h2{
+    font-size: 2.5em;
+    color: #fff;
+    margin-bottom: 25px;
+}
+.sec p{
+    font-size: 1em;
+    color: #fff;
+}
+#bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+#moon{
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+}
+#cloud1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 600px;
+}
+#cloud2{
+    position: absolute;
+    top: 35%;
+    left: 0%;
+    max-width: 200px;
+}
+#cloud3{
+    position: absolute;
+    top: 10%;
+    left: 60%;
+    max-width: 400px;
+}
+#jet{
+    position: absolute;
+    top: 50px;
+    left: 150px;
+    max-width: 100%;
+    transform: scale(0);
+}
+#ironman{
+    position: absolute;
+    top: 110%;
+    z-index: 10000;
+    max-width: 70%;
+}
+    </style>
+</head>
+<body>
+    <section>
+    <img src="bg.jpg" id="bg">
+    <img src="moon (1).png" id="moon">
+    <img src="cloud1.png" id="cloud1">
+    <img src="cloud2.png" id="cloud2">
+    <img src="cloud3.png" id="cloud3">
+    <img src="jet.png" id="jet">
+    <img src="ironman.png" id="ironman">
+    </section>
+    <div class="sec">
+        <div class="content">
+            <h2>My name is Tony Stark and I am not afraid of you.</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos esse molestiae aperiam? Reiciendis rerum repellat a voluptatibus aperiam incidunt, atque quidem sequi maxime.Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque doloribus repudiandae laudantium nesciunt ad! Nobis eum voluptatem quis, laudantium alias dignissimos, impedit dicta ipsa quod, quos in doloribus reprehenderit officiis facilis perferendis excepturi commodi laborum libero dolores? Voluptas, dolor! ipsum dolor, sit amet consectetur adipisicing elit. Rem accusamus deserunt fugiat repudiandae minima et atque, aperiam omnis a, vitae porro iure debitis? Esse voluptas odit eaque blanditiis nostrum!<br><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit neque fugiat tenetur sapiente commodi officiis nihil! Laborum eum odio nostrum, fugiat cupiditate, atque autem laudantium illum optio ad voluptate repellendus accusamus facilis. Est quia hic facere voluptate? Temporibus recusandae odio adipisci architecto omnis voluptatem, incidunt maxime repellat, illo pariatur dignissimos!<br><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla sapiente dolore a nemo eos in ratione veniam sequi perspiciatis provident maiores consectetur odio ab nisi adipisci temporibus alias, deserunt accusantium. Ullam iste amet eos exercitationem laudantium quidem voluptatum dolor quaerat! Nulla similique sequi placeat quis molestias modi quia sunt quae.<br><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, quos eius sit dolorem ad distinctio ut deleniti ex cupiditate odit nemo maxime eos omnis voluptates soluta quo. Iure, nihil omnis pariatur delectus harum ducimus tempore.
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos esse molestiae aperiam? Reiciendis rerum repellat a voluptatibus aperiam incidunt, atque quidem sequi maxime.<br><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque doloribus repudiandae laudantium nesciunt ad! Nobis eum voluptatem quis, laudantium alias dignissimos, impedit dicta ipsa quod, quos in doloribus reprehenderit officiis facilis perferendis excepturi commodi laborum libero dolores? Voluptas, dolor!<br><br>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem accusamus deserunt fugiat repudiandae minima et atque, aperiam omnis a, vitae porro iure debitis? Esse voluptas odit eaque blanditiis nostrum!<br><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit neque fugiat tenetur sapiente commodi officiis nihil! Laborum eum odio nostrum, fugiat cupiditate, atque autem laudantium illum optio ad voluptate repellendus accusamus facilis. Est quia hic facere voluptate? Temporibus recusandae odio adipisci architecto omnis voluptatem, incidunt maxime repellat, illo pariatur dignissimos!<br><br>Lorem ipsum dolor 
+            </p>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/ScrollTrigger.min.js"></script>
+    <script>
+        gsap.to("#bg",{
+            scrollTrigger : {
+                scrub: true
+            },
+            y: 200,
+            scale: 1.5
+        })
+
+        gsap.to("#moon",{
+            scrollTrigger : {
+                scrub: true
+            },
+            x: -400,
+            scale: 2
+        })
+
+        gsap.to("#cloud1",{
+            scrollTrigger : {
+                scrub: true
+            },
+            x: 300,
+        })
+
+        gsap.to("#cloud3",{
+            scrollTrigger : {
+                scrub: true
+            },
+            x: 300,
+        })
+
+        gsap.to("#jet",{
+            scrollTrigger : {
+                scrub: true
+            },
+            x: 1000,
+            y: 200,
+            scale: 4,
+            rotate: 60
+        })
+
+        // gsap.to("#ironman",{
+        //     scrollTrigger : {
+        //         scrub: true
+        //     },
+        //    y: 1800,
+        //      x: 0,
+        //     scale: 2
+        // })
+
+        gsap.to("#ironman",{
+            scrollTrigger : {
+                scrub: true
+            },
+            x: 0,
+            y: -1800,
+            scale: 2,
+            rotate: -70
+        })
+    </script>
+</body>
+</html>
